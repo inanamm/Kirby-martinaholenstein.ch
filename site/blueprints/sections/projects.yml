@@ -1,0 +1,11 @@
+type: pages
+label: Projects
+parent: kirby.page("projects")
+info: 
+layout: cards
+size: small
+empty: No projects yet
+image:
+  cover: true
+search: true
+template: project

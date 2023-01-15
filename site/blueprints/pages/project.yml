@@ -1,0 +1,25 @@
+title: Project Page
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      fields:
+        type: fields
+        fields:
+          text:
+            type: writer
+            inline: true
+          info:
+            type: writer
+          speed: 
+            type: number
+
+  sidebar:
+    width: 1/3
+    sections:
+      images:
+        type: files
+        layout: list
+        image:
+          back: black
