@@ -5,3 +5,5 @@ Text: branding. development of an identity for the fictional band encounters, ba
 ----
 Info: zhdk — 2019
 in collaboration with micha niederhäuser
+----
+Speed: 0.9

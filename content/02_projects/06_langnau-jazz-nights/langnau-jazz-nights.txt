@@ -5,3 +5,5 @@ Text: poster. poster proposal for the 30th langnau jazz nights 2020. based on be
 ----
 Info: zhdk — 2019
 mentored by rebecca morganti-pfaffhauser und martin woodtli
+----
+Speed: 0.7

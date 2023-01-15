@@ -5,3 +5,5 @@ Text: video installation. an analysis of body language during a conversation, fo
 ----
 Info: isia urbino und werkplaats typografie summer school — 2019
 mentored by armand mevis, maureen mooren, leonardo sonnoli and uta eisenreich.
+----
+Speed: 0.8

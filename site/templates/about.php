@@ -1,39 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- MARTINA HOLENSTEIN — <?php echo date("m Y");?> -->
+
 <html lang="en">
+
 <?php snippet('head') ?>
-<?php snippet('header') ?>
-<?php snippet('intro') ?>
-<?php snippet('layouts', ['field' => $page->layout()])  ?>
 
-<?php
+<body id="about-page" data-barba="wrapper">
+    <div data-barba="container" data-barba-namespace="about">
+        <header>
+            <nav>
+                <a href="<?= $pages->get('home')->url()?>"><?= $pages->get('projects')->title() ?></a>
+                <h1><?= $page->title() ?></h1>
+            </nav>
+        </header>
 
-/*
-<aside class="contact">
-  <h2 class="h1">Get in contact</h2>
-  <div class="grid" style="--gutter: 1.5rem">
-    <section class="column text" style="--columns: 4">
-      <h3>Address</h3>
-      <?= $page->address() ?>
-    </section>
-    <section class="column text" style="--columns: 4">
-      <h3>Email</h3>
-      <p><?= Html::email($page->email()) ?></p>
-      <h3>Phone</h3>
-      <p><?= Html::tel($page->phone()) ?></p>
-    </section>
-    <section class="column text" style="--columns: 4">
-      <h3>On the web</h3>
-      <ul>
-        <?php foreach ($page->social()->toStructure() as $social): ?>
-        <li><?= Html::a($social->url(), $social->platform()) ?></li>
-        <?php endforeach ?>
-      </ul>
-    </section>
-  </div>
-</aside>
-*/
-?>
-
-<?php snippet('footer') ?>
+        <main>
+            <p><?= $page->text() ?></p>
+            <br>
+            <p>
+                <?php if ($contact = $page->contact()->toObject()): ?>
+                <a href="mailto:<?= $contact->email() ?>"><?= $contact->text() ?></a>
+                <?php endif ?>
+                <br>
+                <?php if ($instagram = $page->instagram()->toObject()): ?>
+                <a href="<?= $instagram->link() ?>" target="_blank"><?= $instagram->text() ?></a>
+                <?php endif ?>
+            </p>
+        </main>
+    </div>
 </body>
+
 </html>

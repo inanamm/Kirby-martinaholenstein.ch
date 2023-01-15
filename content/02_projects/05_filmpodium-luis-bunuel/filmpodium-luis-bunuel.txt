@@ -5,3 +5,5 @@ Text: poster pitch. concept idea for the filmpodium of the city of zurich about 
 ----
 Info: zhdk — 2019
 in collaboration with flurina frei
+----
+Speed: 0.85

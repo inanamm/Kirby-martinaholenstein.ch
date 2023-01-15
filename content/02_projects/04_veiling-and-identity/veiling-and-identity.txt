@@ -5,3 +5,5 @@ Text: editorial and photography project. a research on identity and a reinterpre
 ----
 Info: zhdk — 2018
 mentored by jonas vögeli, piera wolf und larissa kaspar.
+----
+Speed: 0.9

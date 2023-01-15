@@ -5,3 +5,5 @@ Text: poster. poster design based on the abstraction and deconstruction of israe
 ----
 Info: zhdk — 2019
 the next territory – workshop with giliane cachin and lea michel
+----
+Speed: 0.9

@@ -1,7 +1,23 @@
-Title: Martina Holenstein
+Title: martina holenstein
+
 ----
+
+Contact:
+
+email: hello@martinaholenstein.ch
+text: say hi!
+
+----
+
+Instagram:
+
+link: https://www.instagram.com/inanamm/
+text: @inanamm
+
+----
+
 Text: swiss graphic designer currently living and working in zurich. fascinated by codes, editorial design and typography, with a big heart for bookbinding and analysis of all kinds.
+
 ----
-Email: mailto:hello@martinaholenstein.ch
-----
-Instagram: https://www.instagram.com/inanamm/
+
+Uuid: uFjhASyZKY4Z19N3

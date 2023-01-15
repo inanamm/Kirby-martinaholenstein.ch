@@ -9,3 +9,5 @@ Thank you for using me.
 ----
 Info: zhdk — BA project 2022
 mentored by tan wälchli, marietta eugster, giliane cachin und david keshajvee 
+----
+Speed: 0.9

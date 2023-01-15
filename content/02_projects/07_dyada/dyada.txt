@@ -5,3 +5,5 @@ Text: typefaces. two cuts, dyada regular and dyada senza. based on intersections
 ----
 Info: zhdk — 2020
 mentored by mauro paolozzi
+----
+Speed: 0.8

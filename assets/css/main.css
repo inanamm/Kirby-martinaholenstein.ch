@@ -1,0 +1,167 @@
+@import "_reset.css";
+
+:root {
+    cursor: crosshair;
+}
+
+:root a {
+    cursor: crosshair;
+}
+
+*::selection {
+    color: white;
+}
+
+html, body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    color: green;
+}
+
+body {
+    padding: 0 1rem 1rem 1rem;
+    font-size:14px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1,h2 {
+    font-size: 3.125em;
+    hyphens: auto;
+}
+
+a {
+    color: green;
+    font-style: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c1dec1;
+}
+
+/* Landing page */
+#landing-page header {
+    padding-top: 1em;
+    display: block;
+    margin-bottom: 3em;
+}
+
+#landing-page header h1, p {
+    font-size: 1.25em;
+}
+
+#landing-page header nav {
+    width: fit-content;
+}
+
+.projektliste {
+    white-space: nowrap;
+    hyphens: none;
+}
+
+.projektliste li:last-child {
+    width: 100vw;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    bottom: 0;
+    z-index: 3;
+    font-size: 1.250em;
+}
+
+.liste {
+    font-size: 3.125em;
+}
+
+.liste:hover a {
+    color: #c1dec1;
+}
+
+/* about page */
+#about-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#about-page header a {
+    display: block;
+    padding-top: 1em;
+    font-size: 1.25em;
+}
+
+#about-page header h1 {
+    font-size: 2.9em;
+}
+
+#about-page main a {
+    text-decoration: underline;
+}
+
+/* project pages */
+.textoben {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em 0;
+    height: 100vh;
+}
+
+.project-page header {
+    padding-bottom: 1em;
+}
+
+.project-page header nav {
+    font-size: 1.25em;
+}
+
+.project-page main {
+    padding-right: 1em;
+    letter-spacing: 0.01em;
+    hyphens: auto;
+}
+
+/* check where used */
+.project-page .projekttext a {
+    text-decoration: underline;
+}
+
+.project-page .image-landscape:not(:last-child) {
+    padding-bottom: 1em;
+}
+
+.project-page .image-portrait:not(:last-child) {
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+@media only screen and (min-width: 720px) {
+    body {
+        font-size:16px;
+    }
+
+    .project-page .image-portrait {
+        width: 75vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .project-page main {
+        width: 80vw;
+        hyphens: none;
+    }
+
+    .project-page .image-portrait {
+        width: 50vw;
+    }
+}

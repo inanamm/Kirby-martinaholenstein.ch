@@ -4,3 +4,5 @@ Title: amphitheatre
 Text: booklet. design and production of a 10x19 cm booklet with japanese binding. process documentation of an architectural project in pula, croatia, by anton krebs and raphael blain.
 ----
 Info: self-initiated project – 2019
+----
+Speed: 0.6
