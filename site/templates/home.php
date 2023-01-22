@@ -18,7 +18,7 @@
             <ul class="projektliste">
                 <?php foreach($pages->get('projects')->children() as $item): ?>
                     <li class="marquee3k liste" data-speed="<?= $item->speed() ?>" data-pausable="true">
-                        <a href="<?= $item->url()?>"><?= $item->title() ?>&nbsp;</a>
+                        <a href="<?= $item->url()?>"><?= $item->title()?> <?= $item->subtitle() ?>&nbsp;</a>
                     </li>
                 <?php endforeach ?>
                     <li>

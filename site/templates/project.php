@@ -16,11 +16,11 @@
     </main>
     </div>
 
-    <div class="image-landscape">
-        <?php foreach ($page->images()->sorted() as $image): ?>
+    <?php foreach ($page->images()->sorted() as $image): ?>
+        <div class="image-<?= $image->orientation() ?>">
             <img src="<?= $image->url() ?>" alt="<?= $image->name() ?>">
-        <?php endforeach ?>
-    </div>
+        </div>
+    <?php endforeach ?>
 
 </body>
 
