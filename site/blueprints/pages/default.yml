@@ -7,20 +7,6 @@ columns:
       fields:
         type: fields
         fields:
-          contact:
-            type: object
-            fields:
-              email:
-                type: email
-              text:
-                type: text
-          instagram:
-            type: object
-            fields:
-              link: 
-                type: url
-              text:
-                type: text
           text:
             type: textarea
             size: huge
