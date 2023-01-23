@@ -17,8 +17,4 @@ mentored by armand mevis, maureen mooren, leonardo sonnoli and uta eisenreich.
 
 ----
 
-Speed: 0.8
-
-----
-
 Uuid: H8Nxr1xZJ9fvCvNH

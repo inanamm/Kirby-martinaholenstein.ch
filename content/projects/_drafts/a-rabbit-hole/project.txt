@@ -6,6 +6,10 @@ Subtitle: X.XX GB — X.XX KG
 
 ----
 
+Speed: 
+
+----
+
 Text: video installation. an analysis of body language during a conversation, focusing on the hands. summer school on the topic of private and public.
 
 ----
@@ -14,10 +18,6 @@ Info:
 
 isia urbino und werkplaats typografie summer school — 2019
 mentored by armand mevis, maureen mooren, leonardo sonnoli and uta eisenreich.
-
-----
-
-Speed: 0.7
 
 ----
 

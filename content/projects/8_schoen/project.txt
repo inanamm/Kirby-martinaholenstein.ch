@@ -6,6 +6,10 @@ Subtitle: 0.00 GB — 0.03 KG
 
 ----
 
+Speed: 
+
+----
+
 Text: poster series. four typographic posters, set in lead type, letterpress on the theme of philosophical aesthetics. created in the evening course elementare typographie at schule für gestaltung.
 
 ----
@@ -14,10 +18,6 @@ Info:
 
 self-initiated project – 2019 — in collaboration with flurina frei
 mentored by rudolf barmettler
-
-----
-
-Speed: 0.7
 
 ----
 

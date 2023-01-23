@@ -6,6 +6,10 @@ Subtitle: 0.01 GB — 0.00 KG
 
 ----
 
+Speed: 
+
+----
+
 Text: typefaces. two cuts, dyada regular and dyada senza. based on intersections of calligraphic brushstrokes. work in progress.
 
 ----
@@ -14,10 +18,6 @@ Info:
 
 zhdk — 2020
 mentored by mauro paolozzi
-
-----
-
-Speed: 0.8
 
 ----
 

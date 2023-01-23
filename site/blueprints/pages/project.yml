@@ -9,14 +9,23 @@ columns:
         type: fields
         fields:
           subtitle:
+            label: Data
+            help: 00.00 GB — 0.00 KG
             type: text
-          text:
-            type: writer
-            inline: true
-          info:
-            type: writer
+            width: 1/2
+            required: true
           speed: 
             type: number
+            help: speed of the landing page animation
+            width: 1/2
+            default: 0.75
+          text:
+            label: Project description
+            type: textarea
+            inline: true
+          info:
+            help: where — year, mentoring
+            type: writer
 
   sidebar:
     width: 1/3
