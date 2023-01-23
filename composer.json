@@ -1,29 +1,21 @@
 {
-  "name": "getkirby/plainkit",
-  "description": "Kirby Plainkit",
+  "name": "martinaholenstein/site",
+  "description": "Martina's website",
   "type": "project",
   "keywords": [
     "kirby",
-    "cms",
-    "starterkit"
+    "cms"
   ],
   "authors": [
     {
-      "name": "Bastian Allgeier",
-      "email": "bastian@getkirby.com",
-      "homepage": "https://getkirby.com"
+      "name": "Martina Holenstein",
+      "email": "hello@martinaholenstein.ch",
+      "homepage": "https://martinaholenstein.ch"
     }
   ],
-  "homepage": "https://getkirby.com",
-  "support": {
-    "email": "support@getkirby.com",
-    "issues": "https://github.com/getkirby/starterkit/issues",
-    "forum": "https://forum.getkirby.com",
-    "source": "https://github.com/getkirby/starterkit"
-  },
   "require": {
     "php": ">=8.0.0 <8.2.0",
-    "getkirby/cms": "^3.8"
+    "getkirby/cms": "^3.9"
   },
   "config": {
     "allow-plugins": {
