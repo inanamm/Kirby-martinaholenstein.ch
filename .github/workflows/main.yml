@@ -10,6 +10,11 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v3
     
+    - name: Install dependencies
+      uses: php-actions/composer@6
+      with:
+        php_version: "8.1"
+    
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
