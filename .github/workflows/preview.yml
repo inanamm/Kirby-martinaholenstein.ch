@@ -20,6 +20,6 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ${{ secrets.previewServer }}
-        username: ${{ secrets.previewUsername }}
-        password: ${{ secrets.previewPassword }}
+        server: ${{ secrets.previewserver }}
+        username: ${{ secrets.previewusername }}
+        password: ${{ secrets.previewpassword }}
