@@ -25,3 +25,6 @@ jobs:
         password: ${{ secrets.password }}
         exclude: |
           .htaccess
+          **/.git*
+          **/.git/**
+          **/.github/**
