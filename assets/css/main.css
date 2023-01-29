@@ -87,7 +87,6 @@ a:hover {
 /* about page */
 #about-page {
     height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -117,7 +116,7 @@ a:hover {
     justify-content: space-between;
     padding: 0.5em 0;
     height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);}
+}
 
 .project-page header {
     padding-bottom: 1em;

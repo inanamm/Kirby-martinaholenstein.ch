@@ -2,9 +2,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $site->title() ?></title>
-    <?= css(['assets/css/_reset.css', 'assets/css/main.css']) ?>    
-    <?= js(['assets/js/viewheight.js']) ?>
-
+    <?= css(['assets/css/_reset.css', 'assets/css/main.css']) ?>
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="<?= url('favicon/apple-touch-icon.png') ?>">
