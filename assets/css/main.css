@@ -49,7 +49,7 @@ a:hover {
 
 /* Landing page */
 #landing-page header {
-    padding-top: 1em;
+    padding-top: 0.5em;
     display: block;
     margin-bottom: 3em;
 }
@@ -127,7 +127,6 @@ a:hover {
 }
 
 .project-page main {
-    padding-right: 1em;
     letter-spacing: 0.01em;
     hyphens: auto;
 }
@@ -167,6 +166,11 @@ a:hover {
     .textoben {
         padding: 1em 0;
     }
+    
+    #landing-page header {
+        padding-top: 1em;
+    }
+
 }
 
 @media only screen and (min-width: 1200px) {
