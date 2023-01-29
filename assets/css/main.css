@@ -93,7 +93,7 @@ a:hover {
 }
 
 #about-page header {
-    padding-top: 1em;
+    padding-top: 0.5em;
 }
 
 #about-page header a {
@@ -171,6 +171,9 @@ a:hover {
         padding-top: 1em;
     }
 
+    #about-page header {
+        padding-top: 1em;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
