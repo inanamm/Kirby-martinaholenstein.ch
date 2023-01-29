@@ -22,7 +22,7 @@ html, body {
 }
 
 body {
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 0.5rem 0.5rem 0.5rem;
     font-size:14px;
 }
 
@@ -114,7 +114,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1em 0;
+    padding: 0.5em 0;
     height: 100vh;
 }
 
@@ -138,21 +138,34 @@ a:hover {
 }
 
 .project-page .image-landscape:not(:last-child) {
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
 }
 
 .project-page .image-portrait:not(:last-child) {
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
     height: 100%;
 }
 
 @media only screen and (min-width: 720px) {
     body {
         font-size:16px;
+        padding: 0 1rem 1rem 1rem;
     }
 
     .project-page .image-portrait {
         width: 75vw;
+    }
+
+    .project-page .image-landscape:not(:last-child) {
+        padding-bottom: 1em;
+    }
+    
+    .project-page .image-portrait:not(:last-child) {
+        padding-bottom: 1em;
+    }
+
+    .textoben {
+        padding: 1em 0;
     }
 }
 
