@@ -10,17 +10,6 @@
     color: white;
 }
 
-/* webfilltry */
-body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-  }
-  html {
-    height: -webkit-fill-available;
-  }
-/* end */
-
-
 html, body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -155,16 +144,6 @@ a:hover {
     padding-bottom: 0.5em;
     height: 100%;
 }
-
-/* webfilltry */
-body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-  }
-  html {
-    height: -webkit-fill-available;
-  }
-/* end */
 
 @media only screen and (min-width: 720px) {
     body {
