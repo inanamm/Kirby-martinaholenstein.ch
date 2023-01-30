@@ -19,9 +19,6 @@ html, body {
     font-style: normal;
     letter-spacing: 0.02em;
     color: green;
-
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
 }
 
 body {
@@ -90,9 +87,6 @@ a:hover {
 /* about page */
 #about-page {
     height: 100vh;
-
-    min-height: -webkit-fill-available;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
