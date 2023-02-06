@@ -86,10 +86,11 @@ a:hover {
 
 /* about page */
 #about-page {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 #about-page header {
@@ -115,8 +116,6 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     padding: 0.5em 0;
-    /* height: 100vh; */
-
     min-height: 100vh;
     min-height: 100dvh;
 }
