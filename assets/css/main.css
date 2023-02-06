@@ -19,6 +19,7 @@ html, body {
     font-style: normal;
     letter-spacing: 0.02em;
     color: green;
+
 }
 
 body {
@@ -115,7 +116,10 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     padding: 0.5em 0;
-    height: 100vh;
+    /* height: 100vh; */
+
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .project-page header {
