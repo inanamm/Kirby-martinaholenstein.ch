@@ -139,10 +139,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.project-page .image-landscape:not(:last-child) {
-    padding-bottom: 0.5em;
-}
-
 .project-page .image-portrait:not(:last-child) {
     padding-bottom: 0.5em;
     height: 100%;
@@ -156,10 +152,6 @@ a:hover {
 
     .project-page .image-portrait {
         width: 75vw;
-    }
-
-    .project-page .image-landscape:not(:last-child) {
-        padding-bottom: 1em;
     }
     
     .project-page .image-portrait:not(:last-child) {
