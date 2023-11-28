@@ -2,10 +2,7 @@
   "name": "martinaholenstein/site",
   "description": "Martina's website",
   "type": "project",
-  "keywords": [
-    "kirby",
-    "cms"
-  ],
+  "keywords": ["kirby", "cms"],
   "authors": [
     {
       "name": "Martina Holenstein",
@@ -14,8 +11,8 @@
     }
   ],
   "require": {
-    "php": ">=8.0.0 <8.2.0",
-    "getkirby/cms": "^3.9"
+    "php": ">=8.0.0 <=8.3.0",
+    "getkirby/cms": "^4.0"
   },
   "config": {
     "allow-plugins": {
