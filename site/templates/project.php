@@ -11,6 +11,10 @@
         <?php snippet('projectHeader') ?>
 
         <main>
+            <h2>
+                <?= $page->subtitle()->kt() ?>
+            </h2>
+
             <p>
                 <?= $page->text()->kt() ?>
             </p><br>

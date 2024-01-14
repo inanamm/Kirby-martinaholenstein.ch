@@ -23,7 +23,7 @@ html, body {
 
 body {
     padding: 0 0.5rem 0.5rem 0.5rem;
-    font-size:14px;
+    /* font-size:14px; */
 }
 
 img {
@@ -32,8 +32,12 @@ img {
     height: auto;
 }
 
-h1,h2 {
+h1 {
     font-size: 3.125em;
+    hyphens: auto;
+}
+
+h2 {
     hyphens: auto;
 }
 
@@ -63,8 +67,32 @@ a:hover {
 }
 
 .projektliste {
-    white-space: nowrap;
     hyphens: none;
+    font-size: 3.125em;
+}
+
+.listitem {
+    border-bottom: 1px solid green;
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.listitem:hover a {
+    color: #c1dec1;
+}
+
+.listItemSubtitle {
+    font-size: 1.25rem;
+}
+
+.hover-image {
+    position: absolute;
+    pointer-events: none;
+    width: 350px;
 }
 
 .projektliste li:last-child {
@@ -73,15 +101,7 @@ a:hover {
     padding-top: 1em;
     bottom: 0;
     z-index: 3;
-    font-size: 1.250em;
-}
-
-.liste {
-    font-size: 3.125em;
-}
-
-.liste:hover a {
-    color: #c1dec1;
+    font-size: 1.25rem;
 }
 
 /* about page */
