@@ -21,8 +21,7 @@ columns:
             default: 0.75
           text:
             label: Project description
-            type: textarea
-            inline: true
+            type: writer
           info:
             help: where — year, mentoring
             type: writer

@@ -9,12 +9,12 @@
     <header>
         <nav>
             <a href="<?= $pages->get('home')->url()?>"><?= $pages->get('projects')->title() ?></a>
-            <h1><?= $page->title() ?></h1>
+            <h1><?= $page->title()->kt() ?></h1>
         </nav>
     </header>
 
     <main>
-        <p><?= $page->text() ?></p>
+        <p><?= $page->text()->kt() ?></p>
         <br>
         <p>
             <?php if ($contact = $page->contact()->toObject()): ?>

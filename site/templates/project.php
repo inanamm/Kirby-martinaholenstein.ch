@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- MARTINA HOLENSTEIN — <?php echo date("m Y");?> -->
+<!-- MARTINA HOLENSTEIN — <?php echo date("m Y"); ?> -->
 
 <html lang="en">
 
@@ -8,12 +8,16 @@
 <body class="project-page">
     <div class="textoben">
 
-<?php snippet('projectHeader') ?>
+        <?php snippet('projectHeader') ?>
 
-    <main>
-        <p><?= $page->text() ?></p><br>
-        <p><?= $page->info() ?></p>
-    </main>
+        <main>
+            <p>
+                <?= $page->text()->kt() ?>
+            </p><br>
+            <p>
+                <?= $page->info()->kt() ?>
+            </p>
+        </main>
     </div>
 
     <?php foreach ($page->images()->sorted() as $image): ?>

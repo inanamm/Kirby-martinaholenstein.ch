@@ -1,4 +1,4 @@
-title: Default Page
+title: About Page
 
 columns:
   main:
@@ -22,5 +22,5 @@ columns:
               text:
                 type: text
           text:
-            type: textarea
+            type: writer
             size: huge
