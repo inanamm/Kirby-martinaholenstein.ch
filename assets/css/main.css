@@ -75,8 +75,8 @@ a:hover {
     border-bottom: 1px solid green;
     padding-bottom: 0.2rem;
     padding-top: 0.2rem;
+    font-size: 2.5rem;
     display: flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: baseline;
 }
@@ -87,6 +87,7 @@ a:hover {
 
 .listItemSubtitle {
     font-size: 1.25rem;
+    display: none;
 }
 
 .hover-image {
@@ -123,7 +124,7 @@ a:hover {
 }
 
 #about-page header h1 {
-    font-size: 2.9em;
+    font-size: 2.5rem;
 }
 
 #about-page main a {
@@ -142,6 +143,10 @@ a:hover {
 
 .project-page header {
     padding-bottom: 1em;
+}
+
+.project-page header h1 {
+    font-size: 2.5rem;
 }
 
 .project-page header nav {
@@ -166,6 +171,23 @@ a:hover {
     body {
         font-size:16px;
         padding: 0 1rem 1rem 1rem;
+    }
+
+    .listItemSubtitle {
+        display: flex;
+    }
+
+    .listitem {
+        flex-direction: row;
+    
+    }
+
+    #about-page header h1 {
+        font-size: 2.9em;
+    }
+ 
+    .project-page header h1 {
+        font-size: 2.9em;
     }
 
     .project-page .image-portrait {
@@ -193,5 +215,13 @@ a:hover {
 
     .project-page .image-portrait {
         width: 50vw;
+    }
+
+    .listitem {
+        font-size: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;    
     }
 }
