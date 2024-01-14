@@ -1,6 +1,6 @@
 on: 
   push:
-    branches: preview
+    branches: main
 name: Deploy website on push
 jobs:
   web-deploy:
