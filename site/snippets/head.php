@@ -12,5 +12,5 @@
     <link rel="mask-icon" href="<?= url('favicon/safari-pinned-tab.svg') ?>" color="#ff0000">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    
+    <script defer src="https://umami.monsteralab.xyz/script.js" data-website-id="25eec6c6-cf19-4ab3-8005-948b812ce985"></script>
 </head>
