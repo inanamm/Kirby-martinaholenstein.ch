@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- MARTINA HOLENSTEIN — <?php echo date("m Y"); ?> -->
+<!-- MARTINA HOLENSTEIN — <?php echo date('m Y'); ?> -->
 
 <html lang="en">
 

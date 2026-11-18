@@ -1,0 +1,19 @@
+{
+  "name": "kirby-mh",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run server",
+    "server": "PHP_CLI_SERVER_WORKERS=4 php -S localhost:8000 -t public_html server.php",
+    "format": "npm run format:js && npm run format:css && npm run format:php",
+    "format:js": "prettier --write \"public_html/assets/**/*.js\" \"*.{js,md}\"",
+    "format:css": "stylelint \"public_html/assets/**/*.css\" --fix && prettier --write \"public_html/assets/**/*.css\"",
+    "format:php": "vendor/bin/ecs check --fix",
+    "format:check": "prettier --check \"public_html/assets/**/*.{js,css}\" \"*.{js,md}\" && stylelint \"public_html/assets/**/*.css\" && vendor/bin/ecs check"
+  },
+  "devDependencies": {
+    "prettier": "^3.10.1",
+    "stylelint": "^18.0.0",
+    "stylelint-config-standard": "^41.0.0"
+  }
+}

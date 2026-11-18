@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- MARTINA HOLENSTEIN — <?php echo date("m Y"); ?> -->
+<!-- MARTINA HOLENSTEIN — <?php echo date('m Y'); ?> -->
 
 <html lang="en">
 
@@ -29,7 +29,7 @@
                 </li>
             <?php endforeach ?>
             <li>
-                <?php echo date("d m Y"); ?>
+                <?php echo date('d m Y'); ?>
             </li>
         </ul>
     </main>

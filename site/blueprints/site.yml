@@ -1,8 +1,12 @@
 title: Site
 
-sections:
-  pages:
-    type: pages
-  projects: sections/projects
-    
+tabs:
+  content:
+    label: Content
+    icon: dashboard
+    sections:
+      pages:
+        type: pages
+      projects: sections/projects
 
+  seo: seo/site

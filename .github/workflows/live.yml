@@ -1,30 +1,15 @@
-on: 
+on:
   push:
-    branches: live
-name: Deploy website on push
+    branches: ["live"]
+
+name: LIVE Deploy website on push
+
 jobs:
-  web-deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: Get latest code
-      uses: actions/checkout@v3
-    
-    - name: Install dependencies
-      uses: php-actions/composer@v6
-      with:
-        php_version: "8.1"
-        php_extensions: gd ctype curl mbstring
-        version: 2
-    
-    - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
-      with:
-        server: ${{ secrets.server }}
-        username: ${{ secrets.username }}
-        password: ${{ secrets.password }}
-        exclude: |
-          .htaccess
-          **/.git*
-          **/.git/**
-          **/.github/**
+  deploy:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      environment: Live
+      php-version: "8.3"
+      # Paths to exclude on this server only, on top of the shared list in deploy.yml.
+      exclude: ""
+    secrets: inherit

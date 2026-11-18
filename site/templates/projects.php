@@ -1,1 +1,3 @@
-<?php go($pages->get('home')->url(), 301) ?>
+<?php
+
+go($pages->get('home')->url(), 301);
