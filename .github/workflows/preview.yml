@@ -9,7 +9,7 @@ on:
 
 jobs:
   deploy:
-    uses: slothiestudio/kirby-workflows/.github/workflows/deploy.yml@v1.6.0
+    uses: slothiestudio/kirby-workflows/.github/workflows/deploy.yml@v1.6.1
     with:
       environment: preview
       php-version: "8.4"
