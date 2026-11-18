@@ -50,11 +50,11 @@ jobs:
       # that Kirby boots from public_html and serves the Panel and static assets.
       - name: Smoke test
         run: |
-          php -S localhost:8000 -t public_html server.php > server.log 2>&1 &
+          php -S localhost:8888 -t public_html server.php > server.log 2>&1 &
           sleep 2
-          curl -fsSL -o /dev/null localhost:8000/panel
-          curl -fsS -o /dev/null localhost:8000/assets/css/main.css
-          curl -fsS -o /dev/null localhost:8000/favicon/favicon.ico
+          curl -fsSL -o /dev/null localhost:8888/panel
+          curl -fsS -o /dev/null localhost:8888/assets/css/main.css
+          curl -fsS -o /dev/null localhost:8888/favicon/favicon.ico
 
       - name: Show server log
         if: failure()

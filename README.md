@@ -13,6 +13,8 @@ Needs PHP 8.3 or newer (Kirby SEO 2 requirement; Kirby 5 itself supports 8.2–8
 direnv, a local `.envrc` + `.nix/flake.nix` (kept out of git) provide PHP 8.3 and Composer.
 
 `content/` isn't in git: copy it from the live server to work locally.
+The styled 404 (`site/templates/error.php`) needs an `error` page in the content
+(create it in the Panel if it's missing).
 
 ## Development
 
@@ -20,8 +22,8 @@ direnv, a local `.envrc` + `.nix/flake.nix` (kept out of git) provide PHP 8.3 an
 npm run dev     # or: composer start
 ```
 
-Runs PHP's built-in server on `localhost:8000`, serving `public_html/` through `server.php`.
-Visit `/panel` to create the first account locally (the Panel installer is only enabled on localhost).
+Runs PHP's built-in server on `localhost:8888`, serving `public_html/` through `server.php`.
+Visit `/panel` to create the first account locally (Kirby only allows the Panel installer on localhost).
 
 ## Format
 

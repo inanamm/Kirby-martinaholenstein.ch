@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "npm run server",
-    "server": "PHP_CLI_SERVER_WORKERS=4 php -S localhost:8000 -t public_html server.php",
+    "server": "PHP_CLI_SERVER_WORKERS=4 php -S localhost:8888 -t public_html server.php",
     "format": "npm run format:js && npm run format:css && npm run format:php",
     "format:js": "prettier --write \"public_html/assets/**/*.js\" \"*.{js,md}\"",
     "format:css": "stylelint \"public_html/assets/**/*.css\" --fix && prettier --write \"public_html/assets/**/*.css\"",

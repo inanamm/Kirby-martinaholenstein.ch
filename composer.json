@@ -30,7 +30,7 @@
   "scripts": {
     "start": [
       "Composer\\Config::disableProcessTimeout",
-      "@php -S localhost:8000 -t public_html server.php"
+      "@php -S localhost:8888 -t public_html server.php"
     ],
     "lint": "ecs check",
     "fix": "ecs check --fix"
