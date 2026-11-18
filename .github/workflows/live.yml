@@ -9,7 +9,7 @@ jobs:
     uses: ./.github/workflows/deploy.yml
     with:
       environment: Live
-      php-version: "8.3"
+      php-version: "8.4"
       # Paths to exclude on this server only, on top of the shared list in deploy.yml.
       exclude: ""
     secrets: inherit

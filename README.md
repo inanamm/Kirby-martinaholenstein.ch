@@ -9,8 +9,8 @@ composer install
 npm install
 ```
 
-Needs PHP 8.3 or newer (Kirby SEO 2 requirement; Kirby 5 itself supports 8.2–8.5). With Nix and
-direnv, a local `.envrc` + `.nix/flake.nix` (kept out of git) provide PHP 8.3 and Composer.
+Needs PHP 8.4 or newer, the version the servers run. With Nix and direnv, a local `.envrc` +
+`.nix/flake.nix` (kept out of git) provide PHP 8.4 and Composer.
 
 `content/` isn't in git: copy it from the live server to work locally.
 The styled 404 (`site/templates/error.php`) needs an `error` page in the content
@@ -71,7 +71,7 @@ Pages are cached as static HTML in `public_html/static/` ([Staticache](https://g
 Apache serves them without PHP (`public_html/.htaccess`). Kirby clears the cache when content changes
 in the Panel, and every deploy deletes it. Caching is off on localhost.
 
-Both servers need PHP 8.3+. Kirby SEO 2 needs a paid license per public domain: activate it in
+Both servers need PHP 8.4+. Kirby SEO 2 needs a paid license per public domain: activate it in
 the Panel under "Metadata & SEO" → "Activate" (not needed locally).
 
 Search engines only index the live domain (`tobimori.seo.robots.index` in
