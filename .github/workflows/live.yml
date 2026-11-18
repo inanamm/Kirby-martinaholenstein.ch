@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    uses: slothiestudio/kirby-workflows/.github/workflows/deploy.yml@v1.3.0
+    uses: slothiestudio/kirby-workflows/.github/workflows/deploy.yml@v1.4.0
     with:
       environment: Live
       php-version: "8.4"
