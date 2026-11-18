@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- MARTINA HOLENSTEIN — <?php echo date('m Y'); ?> -->
 
-<html lang="en">
+<html lang="<?= $kirby->language()?->code() ?? 'de' ?>">
 
 <?php snippet('head') ?>
 
@@ -13,6 +13,7 @@
                     <?= $page->title() ?>
                 </h1>
             </a>
+            <?php snippet('language-switcher') ?>
         </nav>
     </header>
     <main>

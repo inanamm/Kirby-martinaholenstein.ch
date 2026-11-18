@@ -5,6 +5,12 @@ return [
     'analytics' => false,
     'tobimori.seo.robots.index' => false,
 
+    // German (default, at /) and English (/en), see site/languages
+    'languages' => true,
+
+    // German (default, at /) and English (/en), see site/languages
+    'languages' => true,
+
     // Index every published page, not only listed ones (projects/about may be unlisted)
     'tobimori.seo.robots.followPageStatus' => false,
     // "projects" only redirects to home

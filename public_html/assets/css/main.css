@@ -53,6 +53,25 @@ a:hover {
     color: #c1dec1;
 }
 
+/* Language switcher, top right on every page */
+.language-switcher {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    gap: 0.5em;
+    font-size: 1.25rem;
+}
+
+#about-page header .language-switcher a {
+    display: inline;
+    font-size: inherit;
+}
+
+.language-switcher a[aria-current] {
+    text-decoration: underline;
+}
+
 /* Landing page */
 #landing-page header {
     padding-top: 0.5em;
@@ -206,6 +225,10 @@ p {
 
     #about-page header {
         padding-top: 1em;
+    }
+
+    .language-switcher {
+        top: 1rem;
     }
 }
 

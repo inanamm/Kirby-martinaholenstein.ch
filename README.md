@@ -25,6 +25,22 @@ npm run dev     # or: composer start
 Runs PHP's built-in server on `localhost:8888`, serving `public_html/` through `server.php`.
 Visit `/panel` to create the first account locally (Kirby only allows the Panel installer on localhost).
 
+## Languages
+
+German is the default language at `/`, English lives under `/en` (`site/languages/`).
+Content files carry the language code (`about.de.txt`, `about.en.txt`), and a switcher
+in the header links to the other language of the current page. UI texts like the 404
+page are translated in the language files.
+
+The switch from a single-language site needs a one-time content migration on each
+server. It moves every `name.txt` to `name.en.txt` and copies it to `name.de.txt`
+(German shows the English text until it's translated), after writing a backup:
+
+```bash
+bin/migrate-content-languages.sh content --dry-run   # locally, see what changes
+ssh user@host 'bash -s -- /path/to/project/content' < bin/migrate-content-languages.sh
+```
+
 ## Format
 
 ```bash
@@ -69,10 +85,12 @@ public_html/    → web root (index.php, .htaccess, assets, favicon, media, stat
 site/
   blueprints/   → Panel blueprints (each page has an SEO tab)
   config/       → config.php + per-domain overrides
+  languages/    → German (default) and English
   plugins/      → installed by Composer (gitignored)
   snippets/
   templates/
 storage/        → accounts, cache, sessions (gitignored)
+bin/            → one-off maintenance scripts (not deployed)
 vendor/, kirby/ → Composer dependencies (gitignored)
 node_modules/   → npm dev tooling (gitignored)
 ```

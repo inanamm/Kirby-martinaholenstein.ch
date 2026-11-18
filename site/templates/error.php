@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- MARTINA HOLENSTEIN — <?php echo date('m Y'); ?> -->
 
-<html lang="en">
+<html lang="<?= $kirby->language()?->code() ?? 'de' ?>">
 
 <?php snippet('head') ?>
 
@@ -9,14 +9,15 @@
     <header>
         <nav>
             <a href="<?= $site->url() ?>"><?= $site->title() ?></a>
-            <h1>Not found</h1>
+            <h1><?= t('notFound.title') ?></h1>
+            <?php snippet('language-switcher') ?>
         </nav>
     </header>
 
     <main>
-        <?= $page->text()->or('This page doesn’t exist.')->kt() ?>
+        <?= $page->text()->or(t('notFound.text'))->kt() ?>
         <br>
-        <p><a href="<?= $site->url() ?>">Back to the homepage</a></p>
+        <p><a href="<?= $site->url() ?>"><?= t('notFound.back') ?></a></p>
     </main>
 </body>
 

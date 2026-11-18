@@ -49,6 +49,7 @@ jobs:
           extra-exclude: |
             # Live data: never push, never delete on the server
             /content
+            /content-backup-*
             /storage
             /public_html/media
             /site/config/.license
@@ -56,6 +57,7 @@ jobs:
             /site/config/config.localhost.php
             # Project source & build-time only
             /server.php
+            /bin
             /ecs.php
             /.editorconfig
             /node_modules

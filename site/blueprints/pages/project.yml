@@ -17,11 +17,13 @@ tabs:
                 type: text
                 width: 1/2
                 required: true
+                translate: false
               speed: 
                 type: number
                 help: speed of the landing page animation
                 width: 1/2
                 default: 0.75
+                translate: false
               text:
                 label: Project description
                 type: writer
