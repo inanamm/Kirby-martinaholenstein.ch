@@ -1,81 +1,18 @@
+name: RELEASE Keep main → live PR up to date
+
 on:
   push:
     branches: ["main", "live"]
-  # Also dispatched by the Dependabot auto-merge job in check.yml: merges made
-  # with GITHUB_TOKEN don't fire push events.
   workflow_dispatch:
-
-name: RELEASE Keep main → live PR up to date
 
 # One run at a time, so two quick merges can't open two release PRs.
 concurrency:
   group: release-pr
   cancel-in-progress: false
 
-permissions:
-  contents: read
-  pull-requests: write
-
 jobs:
   release-pr:
-    name: Update release PR
-    runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      GH_REPO: ${{ github.repository }}
-      TITLE: "Release: main → live"
-
-    steps:
-      - name: Get latest code
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-
-      - name: Create or update the release PR
-        run: |
-          set -euo pipefail
-
-          if ! git rev-parse --verify --quiet origin/live >/dev/null; then
-            echo "::notice::No live branch yet, nothing to release to."
-            exit 0
-          fi
-
-          existing=$(gh pr list --base live --head main --state open --json number --jq '.[0].number // empty')
-          ahead=$(git rev-list --count origin/live..origin/main)
-
-          if [ "$ahead" -eq 0 ]; then
-            echo "live is up to date with main."
-            if [ -n "$existing" ]; then
-              gh pr close "$existing" --comment "live is up to date with main, closing."
-            fi
-            exit 0
-          fi
-
-          # Changelog: PRs merged into main since live, plus direct commits.
-          {
-            echo "Everything on \`main\` that isn't on \`live\` yet. Merging this deploys it to the live site."
-            echo
-            echo "> Use **Create a merge commit** (not squash or rebase), so main and live stay in sync."
-            echo
-            echo "## Changes"
-            git log origin/live..origin/main --first-parent --format='%H%x09%s' |
-              while IFS=$'\t' read -r sha subject; do
-                if [[ "$subject" =~ ^Merge\ pull\ request\ \#([0-9]+) ]]; then
-                  number="${BASH_REMATCH[1]}"
-                  info=$(gh pr view "$number" --json title,author --jq '"\(.title) (@\(.author.login))"' 2>/dev/null || echo "")
-                  echo "- #$number ${info/@app\/dependabot/dependabot}"
-                else
-                  echo "- ${sha:0:7} $subject"
-                fi
-              done
-            echo
-            echo "_Updated automatically by \`release-pr.yml\` on every change to \`main\` or \`live\`._"
-          } > body.md
-
-          if [ -n "$existing" ]; then
-            gh pr edit "$existing" --title "$TITLE" --body-file body.md
-            echo "Updated release PR #$existing ($ahead commits)."
-          else
-            gh pr create --base live --head main --title "$TITLE" --body-file body.md
-            echo "Opened release PR ($ahead commits)."
-          fi
+    uses: slothiestudio/kirby-workflows/.github/workflows/release-pr.yml@v1.0.0
+    permissions:
+      contents: read
+      pull-requests: write

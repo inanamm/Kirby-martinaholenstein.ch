@@ -1,15 +1,12 @@
+name: LIVE Deploy website on push
+
 on:
   push:
     branches: ["live"]
 
-name: LIVE Deploy website on push
-
 jobs:
   deploy:
-    uses: ./.github/workflows/deploy.yml
+    uses: slothiestudio/kirby-workflows/.github/workflows/deploy.yml@v1.0.0
     with:
       environment: Live
       php-version: "8.4"
-      # Paths to exclude on this server only, on top of the shared list in deploy.yml.
-      exclude: ""
-    secrets: inherit

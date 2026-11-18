@@ -1,18 +1,15 @@
+name: PREVIEW Deploy website on push
+
 on:
   push:
     branches: ["main"]
-  # Also triggered by the Dependabot auto-merge job in check.yml: merges made
-  # with GITHUB_TOKEN don't fire push events, so it dispatches this directly.
+  # Started by the Dependabot auto-merge in check.yml (merges made by
+  # workflows don't fire push events).
   workflow_dispatch:
-
-name: PREVIEW Deploy website on push
 
 jobs:
   deploy:
-    uses: ./.github/workflows/deploy.yml
+    uses: slothiestudio/kirby-workflows/.github/workflows/deploy.yml@v1.0.0
     with:
       environment: preview
       php-version: "8.4"
-      # Paths to exclude on this server only, on top of the shared list in deploy.yml.
-      exclude: ""
-    secrets: inherit

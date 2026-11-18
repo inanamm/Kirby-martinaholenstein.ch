@@ -59,9 +59,14 @@ Runs Prettier (JS, CSS, Markdown), Stylelint (CSS) and
 | `main` | https://preview.martinaholenstein.ch |
 | `live` | https://martinaholenstein.ch         |
 
-GitHub Actions deploys over SSH (`.github/workflows/deploy.yml`). Every push to `main` keeps a
-"Release: main → live" PR up to date; merging it (with a merge commit) releases to live.
-PRs are checked by `check.yml`, and Dependabot patch updates are merged automatically.
+GitHub Actions deploys over SSH. Every push to `main` keeps a "Release: main → live" PR up to
+date; merging it (with a merge commit) releases to live. PRs are checked by `check.yml`, and
+Dependabot patch updates are merged automatically.
+
+The workflows themselves are shared with the other slothiestudio Kirby sites in
+[slothiestudio/kirby-workflows](https://github.com/slothiestudio/kirby-workflows): the files in
+`.github/workflows/` only call them with this site's settings (PHP version, smoke-test URLs).
+Dependabot opens a PR here when a new version is released.
 
 Each server's document root must point to `public_html/`. Server secrets live in the `Live` and
 `preview` GitHub environments: `SERVER_URL`, `USERNAME`, `SSH_KEY` or `PASSWORD`, and the variable

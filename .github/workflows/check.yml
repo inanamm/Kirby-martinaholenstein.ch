@@ -1,91 +1,26 @@
+name: CHECK Pull request
+
 on:
   pull_request:
     branches: ["main", "live"]
 
-name: CHECK Install and boot site
-
-# A new push to a PR cancels its older, still running check. Only the
-# latest commit matters, e.g. when several merges update the release PR.
+# A new push to a PR cancels its older, still running check.
 concurrency:
   group: check-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
-permissions:
-  contents: read
-
 jobs:
   check:
-    name: Install and smoke test
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Get latest code
-        uses: actions/checkout@v7
-
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: "8.4"
-          extensions: gd, ctype, curl, mbstring, zip
-          tools: composer:v2
-
-      - name: Install composer dependencies
-        run: composer install --no-interaction --no-progress
-
-      - name: Lint PHP
-        run: find public_html site server.php -name '*.php' -not -path 'site/plugins/*' -print0 | xargs -0 -n1 php -l
-
-      - name: Set up Node
-        uses: actions/setup-node@v7
-        with:
-          node-version: "24"
-
-      - name: Install npm dependencies
-        run: npm ci
-
-      - name: Check formatting and lint
-        run: npm run format:check
-
-      # Content isn't in the repo, so pages can't be rendered here. This checks
-      # that Kirby boots from public_html and serves the Panel and static assets.
-      - name: Smoke test
-        run: |
-          php -S localhost:8888 -t public_html server.php > server.log 2>&1 &
-          sleep 2
-          curl -fsSL -o /dev/null localhost:8888/panel
-          curl -fsS -o /dev/null localhost:8888/assets/css/main.css
-          curl -fsS -o /dev/null localhost:8888/favicon/favicon.ico
-
-      - name: Show server log
-        if: failure()
-        run: cat server.log
-
-  # Merge Dependabot patch group PRs once the check above passes, then
-  # deploy to preview. Minors, majors, security PRs and GitHub Actions updates are
-  # left for manual review. `live` is never touched.
-  automerge:
-    name: Auto-merge Dependabot patches
-    needs: check
-    runs-on: ubuntu-latest
-    if: >-
-      github.event.pull_request.user.login == 'dependabot[bot]' &&
-      github.event.pull_request.base.ref == 'main' &&
-      contains(github.event.pull_request.title, '-patch group')
+    uses: slothiestudio/kirby-workflows/.github/workflows/check.yml@v1.0.0
     permissions:
       contents: write
       pull-requests: write
       actions: write
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      GH_REPO: ${{ github.repository }}
-      PR: ${{ github.event.pull_request.number }}
-      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-    steps:
-      - name: Merge PR
-        run: gh pr merge "$PR" --merge --match-head-commit "$HEAD_SHA"
-
-      - name: Deploy to preview
-        run: gh workflow run preview.yml --ref main
-
-      - name: Update release PR
-        run: gh workflow run release-pr.yml --ref main
+    with:
+      php-version: "8.4"
+      # Content isn't in git, so pages can't be rendered in CI: check that
+      # Kirby boots and serves the Panel and static files.
+      smoke-urls: |
+        /panel
+        /assets/css/main.css
+        /favicon/favicon.ico
