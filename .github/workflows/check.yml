@@ -11,14 +11,15 @@ concurrency:
 
 jobs:
   check:
-    uses: slothiestudio/kirby-workflows/.github/workflows/check.yml@v1.4.0
+    uses: slothiestudio/kirby-workflows/.github/workflows/check.yml@v1.5.0
     permissions:
       contents: write
       pull-requests: write
       actions: write
     with:
       php-version: "8.4"
-      # Mentioned (and so emailed by GitHub) after a Dependabot auto-merge.
+      # Emailed (via a mention) when Dependabot opens a PR, auto-merges a patch
+      # or a PR fails its checks.
       notify: GuidoOffermans inanamm
       preview-url: https://preview.martinaholenstein.ch
       # Content isn't in git, so pages can't be rendered in CI: check that

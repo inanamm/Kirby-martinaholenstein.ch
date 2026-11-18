@@ -7,8 +7,6 @@ updates:
 
   - package-ecosystem: composer
     directory: /
-    # Assigned PRs make GitHub email these people.
-    assignees: ["GuidoOffermans", "inanamm"]
     schedule:
       interval: daily
 
@@ -42,8 +40,6 @@ updates:
 
   - package-ecosystem: npm
     directory: /
-    # Assigned PRs make GitHub email these people.
-    assignees: ["GuidoOffermans", "inanamm"]
     schedule:
       interval: daily
 
@@ -60,7 +56,5 @@ updates:
 
   - package-ecosystem: github-actions
     directory: /
-    # Assigned PRs make GitHub email these people.
-    assignees: ["GuidoOffermans", "inanamm"]
     schedule:
       interval: monthly

@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   release-pr:
-    uses: slothiestudio/kirby-workflows/.github/workflows/release-pr.yml@v1.4.0
+    uses: slothiestudio/kirby-workflows/.github/workflows/release-pr.yml@v1.5.0
     permissions:
       contents: read
       pull-requests: write
