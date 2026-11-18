@@ -5,96 +5,16 @@ on:
     branches: ["live"]
 
 jobs:
-  # The deploy job lives here rather than in the shared kirby-workflows
-  # reusable workflow: that repo is owned by another account, and GitHub
-  # doesn't pass secrets to reusable workflows across owners. The shared
-  # ssh-deploy action works fine, since it runs inside this job.
   deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    environment: Live
-
-    steps:
-      - name: Check server settings
-        env:
-          SERVER_URL: ${{ secrets.SERVER_URL }}
-          USERNAME: ${{ secrets.USERNAME }}
-          SSH_KEY: ${{ secrets.SSH_KEY }}
-          PASSWORD: ${{ secrets.PASSWORD }}
-          SERVER_DIRECTORY: ${{ vars.SERVER_DIRECTORY }}
-        run: |
-          missing=""
-          [ -n "$SERVER_URL" ] || missing="$missing SERVER_URL"
-          [ -n "$USERNAME" ] || missing="$missing USERNAME"
-          [ -n "$SSH_KEY$PASSWORD" ] || missing="$missing SSH_KEY/PASSWORD"
-          [ -n "$SERVER_DIRECTORY" ] || missing="$missing SERVER_DIRECTORY(variable)"
-          if [ -n "$missing" ]; then
-            echo "::error::Missing in the 'Live' environment:$missing"
-            exit 1
-          fi
-
-      - name: Get latest code
-        uses: actions/checkout@v7
-
-      - name: Install composer dependencies
-        uses: php-actions/composer@v6
-        with:
-          php_version: "8.4"
-          php_extensions: gd ctype curl mbstring zip
-          version: 2.x
-          dev: no
-
-      - name: Deploy
-        uses: slothiestudio/kirby-workflows/ssh-deploy@v1.1.0
-        with:
-          host: ${{ secrets.SERVER_URL }}
-          username: ${{ secrets.USERNAME }}
-          target: ${{ vars.SERVER_DIRECTORY }}
-          # Auth: a key (preferred) or a password. Passphrase/fingerprint optional.
-          ssh-private-key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          password: ${{ secrets.PASSWORD }}
-          fingerprint: ${{ secrets.SSH_FINGERPRINT }}
-          extra-exclude: |
-            # Live data: never push, never delete on the server
-            /content
-            /content-backup-*
-            /storage
-            /public_html/media
-            /site/config/.license
-            # Local-only config
-            /site/config/config.localhost.php
-            # Project source, tooling & tests: build-time only
-            /src
-            /assets
-            /bin
-            /tests
-            /test-results
-            /playwright-report
-            /playwright.config.js
-            /server.php
-            /vite.config.js
-            /ecs.php
-            /package.json
-            /package-lock.json
-            /composer.json
-            /composer.lock
-            /README.md
-            /.editorconfig
-            /.prettierrc
-            /.prettierignore
-            /.stylelintrc.json
-            /.stylelintignore
-          # Clear Kirby's cache (keep only the root index.html stub) and the
-          # Staticache pages (all of it: static/index.html is the cached homepage).
-          post-deploy: |
-            CACHE="${{ vars.SERVER_DIRECTORY }}/storage/cache"
-            if [ -d "$CACHE" ]; then
-              find "$CACHE" -mindepth 1 -maxdepth 1 ! -name index.html -exec rm -rf -- {} +
-              echo "Cleared Kirby cache at $CACHE"
-            else
-              echo "No cache directory at $CACHE; nothing to clear"
-            fi
-            STATIC="${{ vars.SERVER_DIRECTORY }}/public_html/static"
-            rm -rf -- "$STATIC"
-            echo "Cleared static pages at $STATIC"
+    uses: slothiestudio/kirby-workflows/.github/workflows/deploy.yml@v1.2.0
+    with:
+      environment: Live
+      php-version: "8.4"
+    # Passed by name: secrets: inherit doesn't work across organizations.
+    secrets:
+      SERVER_URL: ${{ secrets.SERVER_URL }}
+      USERNAME: ${{ secrets.USERNAME }}
+      SSH_KEY: ${{ secrets.SSH_KEY }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+      SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
+      SSH_FINGERPRINT: ${{ secrets.SSH_FINGERPRINT }}
