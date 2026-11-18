@@ -1,26 +1,32 @@
 title: About Page
 
-columns:
-  main:
-    width: 2/3
-    sections:
-      fields:
-        type: fields
-        fields:
-          contact:
-            type: object
+tabs:
+  content:
+    label: Content
+    icon: text
+    columns:
+      main:
+        width: 2/3
+        sections:
+          fields:
+            type: fields
             fields:
-              email:
-                type: email
+              contact:
+                type: object
+                fields:
+                  email:
+                    type: email
+                  text:
+                    type: text
+              instagram:
+                type: object
+                fields:
+                  link: 
+                    type: url
+                  text:
+                    type: text
               text:
-                type: text
-          instagram:
-            type: object
-            fields:
-              link: 
-                type: url
-              text:
-                type: text
-          text:
-            type: writer
-            size: huge
+                type: writer
+                size: huge
+
+  seo: seo/page

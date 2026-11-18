@@ -10,11 +10,12 @@
     color: white;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-weight: 400;
     font-style: normal;
     letter-spacing: 0.02em;
@@ -22,7 +23,8 @@ html, body {
 }
 
 body {
-    padding: 0 0.5rem 0.5rem 0.5rem;
+    padding: 0 0.5rem 0.5rem;
+
     /* font-size:14px; */
 }
 
@@ -51,6 +53,25 @@ a:hover {
     color: #c1dec1;
 }
 
+/* Language switcher, top right on every page */
+.language-switcher {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    gap: 0.5em;
+    font-size: 1.25rem;
+}
+
+#about-page header .language-switcher a {
+    display: inline;
+    font-size: inherit;
+}
+
+.language-switcher a[aria-current] {
+    text-decoration: underline;
+}
+
 /* Landing page */
 #landing-page header {
     padding-top: 0.5em;
@@ -58,7 +79,8 @@ a:hover {
     margin-bottom: 3em;
 }
 
-#landing-page header h1, p {
+#landing-page header h1,
+p {
     font-size: 1.25em;
 }
 
@@ -169,8 +191,8 @@ a:hover {
 
 @media only screen and (min-width: 720px) {
     body {
-        font-size:16px;
-        padding: 0 1rem 1rem 1rem;
+        font-size: 16px;
+        padding: 0 1rem 1rem;
     }
 
     .listItemSubtitle {
@@ -179,13 +201,12 @@ a:hover {
 
     .listitem {
         flex-direction: row;
-    
     }
 
     #about-page header h1 {
         font-size: 2.9em;
     }
- 
+
     .project-page header h1 {
         font-size: 2.9em;
     }
@@ -197,13 +218,17 @@ a:hover {
     .textoben {
         padding: 1em 0;
     }
-    
+
     #landing-page header {
         padding-top: 1em;
     }
 
     #about-page header {
         padding-top: 1em;
+    }
+
+    .language-switcher {
+        top: 1rem;
     }
 }
 
@@ -222,6 +247,6 @@ a:hover {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: baseline;    
+        align-items: baseline;
     }
 }

@@ -1,7 +1,7 @@
 <!doctype html>
-<!-- MARTINA HOLENSTEIN — <?php echo date("m Y"); ?> -->
+<!-- MARTINA HOLENSTEIN — <?php echo date('m Y'); ?> -->
 
-<html lang="en">
+<html lang="<?= $kirby->language()?->code() ?? 'de' ?>">
 
 <?php snippet('head') ?>
 
@@ -30,6 +30,7 @@
         </div>
     <?php endforeach ?>
 
+    <?php snippet('seo/schemas') ?>
 </body>
 
 </html>

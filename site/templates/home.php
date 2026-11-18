@@ -1,7 +1,7 @@
 <!doctype html>
-<!-- MARTINA HOLENSTEIN — <?php echo date("m Y"); ?> -->
+<!-- MARTINA HOLENSTEIN — <?php echo date('m Y'); ?> -->
 
-<html lang="en">
+<html lang="<?= $kirby->language()?->code() ?? 'de' ?>">
 
 <?php snippet('head') ?>
 
@@ -13,6 +13,7 @@
                     <?= $page->title() ?>
                 </h1>
             </a>
+            <?php snippet('language-switcher') ?>
         </nav>
     </header>
     <main>
@@ -25,16 +26,23 @@
                     <a href="<?= $item->url() ?>" class="listItemSubtitle">
                         <?= $item->subtitle() ?>
                     </a>
-                    <div class="hover-image" data-image="<?= $item->image()->url() ?>"></div>
+                    <div class="hover-image" data-image="<?= $item->image()?->url() ?>"></div>
                 </li>
             <?php endforeach ?>
             <li>
-                <?php echo date("d m Y"); ?>
+                <time id="today"><?php echo date('d m Y'); ?></time>
             </li>
         </ul>
     </main>
 
     <script>
+        // The page is cached (Staticache), so set today's date in the browser
+        const today = new Date();
+        document.getElementById('today').textContent = [today.getDate(), today.getMonth() + 1]
+            .map((n) => String(n).padStart(2, '0'))
+            .concat(today.getFullYear())
+            .join(' ');
+
         let hoverImage;
         let delayTimer;
 
@@ -93,6 +101,7 @@
 
     </script>
 
+    <?php snippet('seo/schemas') ?>
 </body>
 
 </html>

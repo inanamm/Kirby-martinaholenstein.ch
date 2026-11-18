@@ -1,30 +1,12 @@
-on: 
+name: LIVE Deploy website on push
+
+on:
   push:
-    branches: live
-name: Deploy website on push
+    branches: ["live"]
+
 jobs:
-  web-deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: Get latest code
-      uses: actions/checkout@v3
-    
-    - name: Install dependencies
-      uses: php-actions/composer@v6
-      with:
-        php_version: "8.1"
-        php_extensions: gd ctype curl mbstring
-        version: 2
-    
-    - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
-      with:
-        server: ${{ secrets.server }}
-        username: ${{ secrets.username }}
-        password: ${{ secrets.password }}
-        exclude: |
-          .htaccess
-          **/.git*
-          **/.git/**
-          **/.github/**
+  deploy:
+    uses: slothiestudio/kirby-workflows/.github/workflows/deploy.yml@v1.1.0
+    with:
+      environment: Live
+      php-version: "8.4"

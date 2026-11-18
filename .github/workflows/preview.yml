@@ -1,30 +1,15 @@
-on: 
+name: PREVIEW Deploy website on push
+
+on:
   push:
-    branches: main
-name: Deploy website on push
+    branches: ["main"]
+  # Started by the Dependabot auto-merge in check.yml (merges made by
+  # workflows don't fire push events).
+  workflow_dispatch:
+
 jobs:
-  web-deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: Get latest code
-      uses: actions/checkout@v3
-    
-    - name: Install dependencies
-      uses: php-actions/composer@v6
-      with:
-        php_version: "8.1"
-        php_extensions: gd ctype curl mbstring
-        version: 2
-    
-    - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
-      with:
-        server: ${{ secrets.previewserver }}
-        username: ${{ secrets.previewusername }}
-        password: ${{ secrets.previewpassword }}
-        exclude: |
-          .htaccess
-          **/.git*
-          **/.git/**
-          **/.github/**
+  deploy:
+    uses: slothiestudio/kirby-workflows/.github/workflows/deploy.yml@v1.1.0
+    with:
+      environment: preview
+      php-version: "8.4"

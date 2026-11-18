@@ -2,7 +2,10 @@
   "name": "martinaholenstein/site",
   "description": "Martina's website",
   "type": "project",
-  "keywords": ["kirby", "cms"],
+  "keywords": [
+    "kirby",
+    "cms"
+  ],
   "authors": [
     {
       "name": "Martina Holenstein",
@@ -11,19 +14,30 @@
     }
   ],
   "require": {
-    "php": ">=8.0.0 <=8.4.0",
-    "getkirby/cms": "^4.0"
+    "php": ">=8.4.0",
+    "getkirby/cms": "^5.0",
+    "tobimori/kirby-seo": "^2.0",
+    "getkirby/staticache": "^2.1",
+    "spatie/schema-org": "^5.0"
   },
   "config": {
     "allow-plugins": {
       "getkirby/composer-installer": true
     },
-    "optimize-autoloader": true
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.4.0"
+    }
   },
   "scripts": {
     "start": [
       "Composer\\Config::disableProcessTimeout",
-      "@php -S localhost:8000 kirby/router.php"
-    ]
+      "@php -S localhost:8888 -t public_html server.php"
+    ],
+    "lint": "ecs check",
+    "fix": "ecs check --fix"
+  },
+  "require-dev": {
+    "symplify/easy-coding-standard": "^12.0 || ^13.0"
   }
 }
