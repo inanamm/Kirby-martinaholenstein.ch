@@ -16,7 +16,8 @@
   "require": {
     "php": ">=8.3.0",
     "getkirby/cms": "^5.0",
-    "tobimori/kirby-seo": "^2.0"
+    "tobimori/kirby-seo": "^2.0",
+    "getkirby/staticache": "^2.1"
   },
   "config": {
     "allow-plugins": {

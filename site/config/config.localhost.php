@@ -5,8 +5,8 @@ return [
 
     'cache' => [
         'pages' => [
-            'type' => 'php',
             'active' => false,
+            'type' => 'static',
         ],
     ],
 ];

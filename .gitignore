@@ -5,6 +5,7 @@ Icon
 
 # Temporary files
 # ---------------
+/public_html/static/
 /public_html/media/*
 !/public_html/media/index.html
 

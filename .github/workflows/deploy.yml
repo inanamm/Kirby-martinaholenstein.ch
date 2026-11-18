@@ -52,8 +52,6 @@ jobs:
             /storage
             /public_html/media
             /site/config/.license
-            # Server-managed (was excluded by the old FTP deploy too)
-            /public_html/.htaccess
             # Local-only config
             /site/config/config.localhost.php
             # Project source & build-time only
@@ -71,7 +69,8 @@ jobs:
             /composer.lock
             /README.md
             ${{ inputs.exclude }}
-          # Clear Kirby's cache (keep only the index.html stub).
+          # Clear Kirby's cache (keep only the root index.html stub) and the
+          # static pages (all of it: static/index.html is the cached homepage).
           post-deploy: |
             CACHE="${{ vars.SERVER_DIRECTORY }}/storage/cache"
             if [ -d "$CACHE" ]; then
@@ -80,3 +79,6 @@ jobs:
             else
               echo "No cache directory at $CACHE; nothing to clear"
             fi
+            STATIC="${{ vars.SERVER_DIRECTORY }}/public_html/static"
+            rm -rf -- "$STATIC"
+            echo "Cleared static pages at $STATIC"

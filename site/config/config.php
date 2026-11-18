@@ -10,6 +10,18 @@ return [
     // "projects" only redirects to home
     'tobimori.seo.sitemap.excludeTemplates' => ['error', 'projects'],
 
+    // Staticache writes finished pages to public_html/static, where Apache serves
+    // them without PHP (see public_html/.htaccess). Each server has one domain,
+    // so there's no per-domain folder.
+    'cache' => [
+        'pages' => [
+            'active' => true,
+            'type' => 'static',
+            'root' => dirname(__DIR__, 2) . '/public_html/static',
+            'prefix' => null,
+        ],
+    ],
+
     'panel' => [
         'favicon' => [
             [

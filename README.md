@@ -51,6 +51,10 @@ Each server's document root must point to `public_html/`. Server secrets live in
 `preview` GitHub environments: `SERVER_URL`, `USERNAME`, `SSH_KEY` or `PASSWORD`, and the variable
 `SERVER_DIRECTORY` (the project root, not `public_html`).
 
+Pages are cached as static HTML in `public_html/static/` ([Staticache](https://github.com/getkirby/staticache)).
+Apache serves them without PHP (`public_html/.htaccess`). Kirby clears the cache when content changes
+in the Panel, and every deploy deletes it. Caching is off on localhost.
+
 Both servers need PHP 8.3+. Kirby SEO 2 needs a paid license per public domain: activate it in
 the Panel under "Metadata & SEO" → "Activate" (not needed locally).
 
@@ -61,7 +65,7 @@ Search engines only index the live domain (`tobimori.seo.robots.index` in
 
 ```
 content/        → Kirby content (gitignored, lives on the server)
-public_html/    → web root (index.php, .htaccess, assets, favicon, media)
+public_html/    → web root (index.php, .htaccess, assets, favicon, media, static/ = page cache)
 site/
   blueprints/   → Panel blueprints (each page has an SEO tab)
   config/       → config.php + per-domain overrides

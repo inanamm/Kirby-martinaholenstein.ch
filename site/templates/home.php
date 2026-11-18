@@ -29,12 +29,19 @@
                 </li>
             <?php endforeach ?>
             <li>
-                <?php echo date('d m Y'); ?>
+                <time id="today"><?php echo date('d m Y'); ?></time>
             </li>
         </ul>
     </main>
 
     <script>
+        // The page is cached (Staticache), so set today's date in the browser
+        const today = new Date();
+        document.getElementById('today').textContent = [today.getDate(), today.getMonth() + 1]
+            .map((n) => String(n).padStart(2, '0'))
+            .concat(today.getFullYear())
+            .join(' ');
+
         let hoverImage;
         let delayTimer;
 
