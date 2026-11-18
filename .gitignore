@@ -5,17 +5,20 @@ Icon
 
 # Temporary files
 # ---------------
-/media/*
-!/media/index.html
+/public_html/static/
+/public_html/media/*
+!/public_html/media/index.html
 
 # Vendor Items
 # ---------------
 /kirby
 /vendor
+node_modules
 
 # Content
 # ---------------
 /content/*
+/content-backup-*
 
 # Lock files
 # ---------------
@@ -35,20 +38,25 @@ Icon
 # Cache Files
 # ---------------
 
-/site/cache/*
-!/site/cache/index.html
+/storage/cache/*
+!/storage/cache/index.html
 
 # Accounts
 # ---------------
 
-/site/accounts/*
-!/site/accounts/index.html
+/storage/accounts/*
+!/storage/accounts/index.html
 
 # Sessions
 # ---------------
 
-/site/sessions/*
-!/site/sessions/index.html
+/storage/sessions/*
+!/storage/sessions/index.html
+
+# Plugins (installed by Composer)
+# ---------------
+
+/site/plugins/*
 
 # License
 # ---------------

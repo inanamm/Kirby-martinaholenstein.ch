@@ -1,0 +1,26 @@
+name: CHECK Pull request
+
+on:
+  pull_request:
+    branches: ["main", "live"]
+
+# A new push to a PR cancels its older, still running check.
+concurrency:
+  group: check-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    uses: slothiestudio/kirby-workflows/.github/workflows/check.yml@v1.1.0
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    with:
+      php-version: "8.4"
+      # Content isn't in git, so pages can't be rendered in CI: check that
+      # Kirby boots and serves the Panel and static files.
+      smoke-urls: |
+        /panel
+        /assets/css/main.css
+        /favicon/favicon.ico

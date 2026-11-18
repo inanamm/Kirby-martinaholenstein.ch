@@ -1,26 +1,19 @@
 # Kirby .htaccess
-# revision 2022-09-15
+# revision 2020-06-15
 
 # rewrite rules
 <IfModule mod_rewrite.c>
 
-# enable awesome urls. i.e.:
-# http://yourdomain.com/about-us/team
 RewriteEngine on
 
-# make sure to set the RewriteBase correctly
-# if you are running the site in a subfolder;
-# otherwise links or the entire site will break.
-#
-# If your homepage is http://yourdomain.com/mysite,
-# set the RewriteBase to:
-#
-# RewriteBase /mysite
+# serve cached pages straight from public_html/static (Staticache), without PHP
+RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+RewriteCond %{DOCUMENT_ROOT}/static%{REQUEST_URI}/index.html -f
+RewriteRule ^ static%{REQUEST_URI}/index.html [END]
 
-# In some environments it's necessary to
-# set the RewriteBase to:
-#
-# RewriteBase /
+RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+RewriteCond %{DOCUMENT_ROOT}/static%{REQUEST_URI} -f
+RewriteRule ^ static%{REQUEST_URI} [END]
 
 # block files and folders beginning with a dot, such as .git
 # except for the .well-known folder, which is used for Let's Encrypt and security.txt
@@ -43,7 +36,7 @@ RewriteRule ^(.*) index.php [L]
 </IfModule>
 
 # pass the Authorization header to PHP
-SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 
 # compress text file responses
 <IfModule mod_deflate.c>

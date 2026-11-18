@@ -1,0 +1,18 @@
+name: RELEASE Keep main → live PR up to date
+
+on:
+  push:
+    branches: ["main", "live"]
+  workflow_dispatch:
+
+# One run at a time, so two quick merges can't open two release PRs.
+concurrency:
+  group: release-pr
+  cancel-in-progress: false
+
+jobs:
+  release-pr:
+    uses: slothiestudio/kirby-workflows/.github/workflows/release-pr.yml@v1.1.0
+    permissions:
+      contents: read
+      pull-requests: write

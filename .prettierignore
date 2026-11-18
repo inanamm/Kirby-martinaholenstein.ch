@@ -1,0 +1,9 @@
+node_modules
+vendor
+kirby
+storage
+site/plugins
+public_html/media
+# third-party library
+public_html/assets/js/marquee3k.js
+public_html/assets/css/_reset.css

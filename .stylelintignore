@@ -1,0 +1,7 @@
+node_modules
+vendor
+kirby
+site/plugins
+public_html/media
+# third-party
+public_html/assets/css/_reset.css
