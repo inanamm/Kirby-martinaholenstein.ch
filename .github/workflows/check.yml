@@ -11,13 +11,15 @@ concurrency:
 
 jobs:
   check:
-    uses: slothiestudio/kirby-workflows/.github/workflows/check.yml@v1.1.0
+    uses: slothiestudio/kirby-workflows/.github/workflows/check.yml@v1.3.0
     permissions:
       contents: write
       pull-requests: write
       actions: write
     with:
       php-version: "8.4"
+      # Mentioned (and so emailed by GitHub) after a Dependabot auto-merge.
+      notify: GuidoOffermans inanamm
       # Content isn't in git, so pages can't be rendered in CI: check that
       # Kirby boots and serves the Panel and static files.
       smoke-urls: |
