@@ -27,6 +27,7 @@
             <?php endif ?>
         </p>
     </main>
+    <?php snippet('seo/schemas') ?>
 </body>
 
 </html>

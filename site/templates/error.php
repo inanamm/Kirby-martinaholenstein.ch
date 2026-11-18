@@ -19,6 +19,7 @@
         <br>
         <p><a href="<?= $site->url() ?>"><?= t('notFound.back') ?></a></p>
     </main>
+    <?php snippet('seo/schemas') ?>
 </body>
 
 </html>

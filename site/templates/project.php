@@ -30,6 +30,7 @@
         </div>
     <?php endforeach ?>
 
+    <?php snippet('seo/schemas') ?>
 </body>
 
 </html>

@@ -26,7 +26,7 @@
                     <a href="<?= $item->url() ?>" class="listItemSubtitle">
                         <?= $item->subtitle() ?>
                     </a>
-                    <div class="hover-image" data-image="<?= $item->image()->url() ?>"></div>
+                    <div class="hover-image" data-image="<?= $item->image()?->url() ?>"></div>
                 </li>
             <?php endforeach ?>
             <li>
@@ -101,6 +101,7 @@
 
     </script>
 
+    <?php snippet('seo/schemas') ?>
 </body>
 
 </html>
