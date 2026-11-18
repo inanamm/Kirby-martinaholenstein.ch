@@ -58,3 +58,28 @@ updates:
     directory: /
     schedule:
       interval: monthly
+
+  # Patches for the live branch itself, so live gets fixes even when main has
+  # unreleased work. Auto-merged and deployed to live by check.yml.
+  - package-ecosystem: composer
+    directory: /
+    target-branch: live
+    schedule:
+      interval: daily
+    cooldown:
+      default-days: 3
+      semver-patch-days: 0
+      exclude:
+        - "getkirby/*"
+    groups:
+      kirby-patch:
+        patterns: ["getkirby/*"]
+        update-types: [patch]
+      composer-patch:
+        patterns: ["*"]
+        exclude-patterns: ["getkirby/*"]
+        update-types: [patch]
+    # Only patches here; minors and majors reach live through main.
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-minor", "version-update:semver-major"]
