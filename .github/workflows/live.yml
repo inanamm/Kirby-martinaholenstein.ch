@@ -3,10 +3,12 @@ name: LIVE Deploy website on push
 on:
   push:
     branches: ["live"]
+  # Started by the Dependabot auto-merge of live patches in check.yml.
+  workflow_dispatch:
 
 jobs:
   deploy:
-    uses: slothiestudio/kirby-workflows/.github/workflows/deploy.yml@v1.5.1
+    uses: slothiestudio/kirby-workflows/.github/workflows/deploy.yml@v1.6.1
     with:
       environment: Live
       php-version: "8.4"
