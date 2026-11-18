@@ -10,6 +10,7 @@ on:
 jobs:
   deploy:
     uses: slothiestudio/kirby-workflows/.github/workflows/deploy.yml@v1.1.0
+    secrets: inherit
     with:
       environment: preview
       php-version: "8.4"
