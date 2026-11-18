@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   check:
-    uses: slothiestudio/kirby-workflows/.github/workflows/check.yml@v1.0.0
+    uses: slothiestudio/kirby-workflows/.github/workflows/check.yml@v1.1.0
     permissions:
       contents: write
       pull-requests: write
