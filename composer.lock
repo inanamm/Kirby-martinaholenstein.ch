@@ -63,8 +63,7 @@
                 "issues": "https://github.com/ChristianRiesen/base32/issues",
                 "source": "https://github.com/ChristianRiesen/base32/tree/1.6.1"
             },
-            "time": "2026-07-11T19:29:43+00:00",
-            "published-time": "2026-07-11T19:32:52+00:00"
+            "time": "2026-07-11T19:29:43+00:00"
         },
         {
             "name": "claviska/simpleimage",
@@ -117,8 +116,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-23T20:35:49+00:00",
-            "published-time": "2026-10-23T20:37:59+00:00"
+            "time": "2026-10-23T20:35:49+00:00"
         },
         {
             "name": "composer/semver",
@@ -195,8 +193,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-29T09:13:34+00:00",
-            "published-time": "2026-10-29T09:14:11+00:00"
+            "time": "2026-10-29T09:13:34+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -252,8 +249,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-16T11:41:01+00:00",
-            "published-time": "2026-02-16T12:37:29+00:00"
+            "time": "2026-02-16T11:41:01+00:00"
         },
         {
             "name": "erusev/parsedown-extra",
@@ -314,8 +310,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-16T13:06:37+00:00",
-            "published-time": "2026-02-16T13:08:29+00:00"
+            "time": "2026-02-16T13:06:37+00:00"
         },
         {
             "name": "filp/whoops",
@@ -386,8 +381,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-09T23:30:17+00:00",
-            "published-time": "2026-11-09T23:32:45+00:00"
+            "time": "2026-11-09T23:30:17+00:00"
         },
         {
             "name": "getkirby/cms",
@@ -489,8 +483,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2026-11-18T09:10:31+00:00",
-            "published-time": "2026-11-18T09:18:44+00:00"
+            "time": "2026-11-18T09:10:31+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -537,8 +530,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-12-28T12:54:39+00:00",
-            "published-time": "2020-12-28T15:05:43+00:00"
+            "time": "2020-12-28T12:54:39+00:00"
         },
         {
             "name": "getkirby/staticache",
@@ -591,8 +583,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2026-03-03T08:45:59+00:00",
-            "published-time": "2026-03-03T08:46:25+00:00"
+            "time": "2026-03-03T08:45:59+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
@@ -653,8 +644,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2025-10-14T18:31:13+00:00",
-            "published-time": "2025-10-14T19:13:23+00:00"
+            "time": "2025-10-14T18:31:13+00:00"
         },
         {
             "name": "league/color-extractor",
@@ -715,8 +705,7 @@
                 "issues": "https://github.com/thephpleague/color-extractor/issues",
                 "source": "https://github.com/thephpleague/color-extractor/tree/0.4.0"
             },
-            "time": "2022-09-24T15:57:16+00:00",
-            "published-time": "2022-09-25T11:27:12+00:00"
+            "time": "2022-09-24T15:57:16+00:00"
         },
         {
             "name": "michelf/php-smartypants",
@@ -770,8 +759,7 @@
                 "issues": "https://github.com/michelf/php-smartypants/issues",
                 "source": "https://github.com/michelf/php-smartypants/tree/1.8.1"
             },
-            "time": "2016-12-13T01:01:17+00:00",
-            "published-time": "2016-12-13T01:09:21+00:00"
+            "time": "2016-12-13T01:01:17+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -853,8 +841,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-07T15:15:17+00:00",
-            "published-time": "2026-11-07T15:16:54+00:00"
+            "time": "2026-11-07T15:15:17+00:00"
         },
         {
             "name": "psr/log",
@@ -904,8 +891,7 @@
             "support": {
                 "source": "https://github.com/php-fig/log/tree/3.0.2"
             },
-            "time": "2024-09-11T13:17:53+00:00",
-            "published-time": "2024-09-11T13:21:14+00:00"
+            "time": "2024-09-11T13:17:53+00:00"
         },
         {
             "name": "spatie/schema-org",
@@ -978,8 +964,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-30T06:09:48+00:00",
-            "published-time": "2026-09-30T06:09:56+00:00"
+            "time": "2026-09-30T06:09:48+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -1050,8 +1035,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-16T14:15:10+00:00",
-            "published-time": "2026-11-04T11:25:34+00:00"
+            "time": "2026-09-16T14:15:10+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -1134,8 +1118,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-04-10T16:19:22+00:00",
-            "published-time": "2026-04-26T14:44:50+00:00"
+            "time": "2026-04-10T16:19:22+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
@@ -1222,8 +1205,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-23T14:40:04+00:00",
-            "published-time": "2026-09-30T10:23:39+00:00"
+            "time": "2026-09-23T14:40:04+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
@@ -1308,8 +1290,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-23T22:02:09+00:00",
-            "published-time": "2026-09-30T10:23:47+00:00"
+            "time": "2026-09-23T22:02:09+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1394,8 +1375,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-28T09:35:49+00:00",
-            "published-time": "2026-10-28T10:07:45+00:00"
+            "time": "2026-10-28T09:35:49+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -1471,8 +1451,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-11-04T08:27:22+00:00",
-            "published-time": "2026-11-04T11:28:41+00:00"
+            "time": "2026-11-04T08:27:22+00:00"
         },
         {
             "name": "tobimori/kirby-seo",
@@ -1546,23 +1525,22 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-24T11:19:36+00:00",
-            "published-time": "2026-10-24T11:19:51+00:00"
+            "time": "2026-10-24T11:19:36+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "symplify/easy-coding-standard",
-            "version": "13.3.21",
+            "version": "13.3.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ecsphp/ecs.git",
-                "reference": "0d1f0259bca495a724c27b55a8555c1bfaf16caf"
+                "reference": "cb9a9bba3d1cbd82338b9a31cdf2bcdf780f02e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ecsphp/ecs/zipball/0d1f0259bca495a724c27b55a8555c1bfaf16caf",
-                "reference": "0d1f0259bca495a724c27b55a8555c1bfaf16caf",
+                "url": "https://api.github.com/repos/ecsphp/ecs/zipball/cb9a9bba3d1cbd82338b9a31cdf2bcdf780f02e9",
+                "reference": "cb9a9bba3d1cbd82338b9a31cdf2bcdf780f02e9",
                 "shasum": ""
             },
             "require": {
@@ -1595,10 +1573,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ecsphp/ecs/issues",
-                "source": "https://github.com/ecsphp/ecs/tree/13.3.21"
+                "source": "https://github.com/ecsphp/ecs/tree/13.3.23"
             },
-            "time": "2026-11-18T16:11:11+00:00",
-            "published-time": "2026-11-18T16:11:24+00:00"
+            "time": "2026-11-19T10:01:21+00:00"
         }
     ],
     "aliases": [],
@@ -1613,5 +1590,5 @@
     "platform-overrides": {
         "php": "8.4.0"
     },
-    "plugin-api-version": "2.11.0"
+    "plugin-api-version": "2.9.0"
 }
